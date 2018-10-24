@@ -1,0 +1,13 @@
+{
+  "name": "Task Heap",
+  "version": "0.0.1",
+  "description": "Clean and simple task manager by the makers of Fluorination.",
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "storage"
+  ]
+}

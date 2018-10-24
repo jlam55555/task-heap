@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+body, html, #app {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #34515e;
+  background-color: white;
+  height: 100%;
+  font-size: 15px;
+}
+#app {
+  display: flex;
+  flex-direction: column;
+}
+#input_container, #tasks_container {
+  width: 20em;
+  display: flex;
+  margin: 0 auto;
+}
+#input_container {
+  padding: 1em 0;
+  flex: 0 0 auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#tasks_container {
+  flex: 1 0 0;
+  overflow: auto;
+  flex-direction: column;
+}
+button, input {
+  font-family: inherit;
+  background-color: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+  font-size: inherit;
+}
+#add_task_input {
+  width: 100%;
+  padding: 0.75em 0.5em;
+  transition: border-color 0.2s;
+  border-bottom: 2px solid #c158dc;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  transition: border-bottom-color 0.2s;
+  margin-right: 0.5em;
+}
+#add_task_input:hover, #add_task_input:focus {
+  border-bottom-color: #5c007a;
+}
+button {
+  font-size: 0.75em;
+  padding: 1em;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: 0.2s border-color, 0.2s color;
+}
+#add_task_button {
+  border: 2px solid #03a9f4;
+  color: #03a9f4;
+}
+#add_task_button:hover {
+  border-color: #67daff;
+  color: #67daff;
+}
+.task:not(:first-child) {
+  opacity: 0.2;
+  transition: opacity 0.2s;
+}
+.task:not(:first-child):hover {
+  opacity: 1;
+}
+.task {
+  width: 100%;
+  padding: 1em;
+  border-radius: 2em;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+.task .date {
+  font-size: smaller;
+  color: #8eacbb;
+}
+.task .check_button {
+  margin-left: 0.5em;
+  border: 2px solid #7cb342;
+  color: #7cb342;
+}
+.task .check_button:hover {
+  border-color: #aee571;
+  color: #aee571;
+}
+#attribution {
+  width: 100%;
+  color: #8eacbb;
+  font-size: smaller;
+  position: absolute;
+  text-align: right;
+  padding-right: 0.5em;
+  bottom: 0.5em;
+}
+#attribution a {
+  color: inherit;
+}

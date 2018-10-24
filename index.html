@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Task Heap</title>
+    <script src='vue.js'></script>
+    <script src='script.js' defer></script>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.1/css/all.css'>
+    <link rel='stylesheet' href='styles.css'>
+  </head>
+  <body>
+    <div id='app'>
+      <div id='input_container'>
+        <input id='add_task_input' v-model='add_task_input' placeholder='Task' @keyup.enter='add_task'>
+        <button id='add_task_button' @click='add_task'><i class='fas fa-fw fa-plus'></i></button>
+      </div>
+      <div id='tasks_container'>
+        <div v-for='(task, i) in tasks' class='task' :key='i'>
+          <div class='task_content_container'>
+            <div class='body'>
+              {{ task.text }}
+            </div>
+            <div class='date'>
+              {{ task.created | date_format }}
+            </div>
+          </div>
+          <button class='check_button' @click='task_complete(task)'><i class='fas fa-fw fa-check'></i></button>
+        </div>
+      </div>
+      <div id='attribution'>Brought to you by the makers of <a href='http://fluorination.herokuapp.com'>Fluorination</a>.</div>
+    </div>
+  </body>
+</html>
